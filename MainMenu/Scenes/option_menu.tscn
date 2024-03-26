@@ -1,0 +1,163 @@
+[gd_scene load_steps=15 format=3 uid="uid://q6mawhedug4i"]
+
+[ext_resource type="Texture2D" uid="uid://0g6tip0eg6j8" path="res://Assets/BackGround.png" id="1_mpynq"]
+[ext_resource type="Script" path="res://Scenes/option_menu.gd" id="1_yd0wy"]
+[ext_resource type="Texture2D" uid="uid://ynhlynj3684h" path="res://Assets/blue_button03.png" id="2_ygyyf"]
+[ext_resource type="Texture2D" uid="uid://bptfe4pru61s0" path="res://Assets/blue_button05.png" id="3_bjjhi"]
+[ext_resource type="FontFile" uid="uid://js4ftbdsfbmn" path="res://Assets/Kenney Future Narrow.ttf" id="4_yxabp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eymhg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rhcg5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5eqpi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rl450"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p0wfh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kavew"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6842c"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j2ms0"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_v0wfo"]
+font = ExtResource("4_yxabp")
+font_size = 30
+outline_size = 2
+outline_color = Color(0, 0, 0, 0.8)
+shadow_color = Color(0, 0, 0, 1)
+
+[node name="OptionMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yd0wy")
+
+[node name="BG" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 278.0
+offset_right = -278.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_mpynq")
+expand_mode = 5
+
+[node name="MC" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_right = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="MenuVBC" type="VBoxContainer" parent="MC"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="MenuScrollContainer" type="ScrollContainer" parent="MC/MenuVBC"]
+custom_minimum_size = Vector2(550, 550)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="KeyVBC" type="VBoxContainer" parent="MC/MenuVBC/MenuScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="UpHBC" type="HBoxContainer" parent="MC/MenuVBC/MenuScrollContainer/KeyVBC"]
+layout_mode = 2
+size_flags_vertical = 6
+
+[node name="ui_up" type="Button" parent="MC/MenuVBC/MenuScrollContainer/KeyVBC/UpHBC"]
+layout_mode = 2
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_eymhg")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_rhcg5")
+text = "Up"
+
+[node name="Label_Up" type="Label" parent="MC/MenuVBC/MenuScrollContainer/KeyVBC/UpHBC"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+
+[node name="LeftHBC" type="HBoxContainer" parent="MC/MenuVBC/MenuScrollContainer/KeyVBC"]
+layout_mode = 2
+
+[node name="ui_left" type="Button" parent="MC/MenuVBC/MenuScrollContainer/KeyVBC/LeftHBC"]
+layout_mode = 2
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_5eqpi")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_rl450")
+text = "Left"
+
+[node name="Label_Left" type="Label" parent="MC/MenuVBC/MenuScrollContainer/KeyVBC/LeftHBC"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+
+[node name="DownHBC" type="HBoxContainer" parent="MC/MenuVBC/MenuScrollContainer/KeyVBC"]
+layout_mode = 2
+
+[node name="ui_down" type="Button" parent="MC/MenuVBC/MenuScrollContainer/KeyVBC/DownHBC"]
+layout_mode = 2
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_p0wfh")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kavew")
+text = "Down"
+
+[node name="Label_Down" type="Label" parent="MC/MenuVBC/MenuScrollContainer/KeyVBC/DownHBC"]
+layout_mode = 2
+
+[node name="RightHBC" type="HBoxContainer" parent="MC/MenuVBC/MenuScrollContainer/KeyVBC"]
+layout_mode = 2
+
+[node name="ui_right" type="Button" parent="MC/MenuVBC/MenuScrollContainer/KeyVBC/RightHBC"]
+layout_mode = 2
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_6842c")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_j2ms0")
+text = "Right"
+
+[node name="Label_Right" type="Label" parent="MC/MenuVBC/MenuScrollContainer/KeyVBC/RightHBC"]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="MC/MenuVBC"]
+custom_minimum_size = Vector2(200, 25)
+layout_mode = 2
+
+[node name="KeyChangeLabel" type="Label" parent="MC/MenuVBC/PanelContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Press any key or mouse button and esc to cancel"
+
+[node name="Back" type="TextureButton" parent="MC/MenuVBC"]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("2_ygyyf")
+texture_pressed = ExtResource("3_bjjhi")
+stretch_mode = 0
+
+[node name="BackLabel" type="Label" parent="MC/MenuVBC/Back"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Back"
+label_settings = SubResource("LabelSettings_v0wfo")
+horizontal_alignment = 1
+vertical_alignment = 1
