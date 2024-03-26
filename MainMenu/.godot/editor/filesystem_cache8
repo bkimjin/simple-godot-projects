@@ -1,0 +1,19 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1711422440
+icon.svg::CompressedTexture2D::4582081953201713816::1707284686::1707284690::1::::<><>::
+README.md::TextFile::-1::1707285505::0::1::::<><>::
+scene_handler.gd::GDScript::-1::1707893397::0::1::::<>Node<>::
+scene_handler.tscn::PackedScene::6673336282449113777::1711422318::0::1::::<><>::res://scene_handler.gd<>uid://c24kcpl6tr0ys::::res://Scenes/main_menu.tscn
+::res://Assets/::1707285464
+BackGround.png::CompressedTexture2D::1769023958835491999::1705528102::1707285459::1::::<><>::
+blue_button03.png::CompressedTexture2D::1711815101888328061::1705527949::1707285458::1::::<><>::
+blue_button05.png::CompressedTexture2D::3478788790879772925::1705527949::1707285458::1::::<><>::
+blue_button12.png::CompressedTexture2D::8063206201324312501::1705527950::1707285458::1::::<><>::
+Kenney Future Narrow.ttf::FontFile::670629113724134929::1705527945::1707285464::1::::<><>::
+::res://Licenses/::1707893397
+Font License.txt::TextFile::-1::1707893397::0::1::::<><>::
+UI License.txt::TextFile::-1::1705527951::0::1::::<><>::
+::res://Scenes/::1711422318
+main_menu.tscn::PackedScene::6728418648273971582::1711422318::0::1::::<><>::uid://0g6tip0eg6j8::::res://Assets/BackGround.png<>uid://ynhlynj3684h::::res://Assets/blue_button03.png<>uid://bptfe4pru61s0::::res://Assets/blue_button05.png<>uid://js4ftbdsfbmn::::res://Assets/Kenney Future Narrow.ttf
+option_menu.gd::GDScript::-1::1707893397::0::1::::<>Control<>::
+option_menu.tscn::PackedScene::1187746979011447562::1711422318::0::1::::<><>::uid://0g6tip0eg6j8::::res://Assets/BackGround.png<>res://Scenes/option_menu.gd<>uid://ynhlynj3684h::::res://Assets/blue_button03.png<>uid://bptfe4pru61s0::::res://Assets/blue_button05.png<>uid://js4ftbdsfbmn::::res://Assets/Kenney Future Narrow.ttf

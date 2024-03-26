@@ -1,0 +1,187 @@
+[gd_scene load_steps=7 format=3 uid="uid://c24kcpl6tr0ys"]
+
+[ext_resource type="Texture2D" uid="uid://0g6tip0eg6j8" path="res://Assets/BackGround.png" id="1_d4qyd"]
+[ext_resource type="Texture2D" uid="uid://ynhlynj3684h" path="res://Assets/blue_button03.png" id="2_0l0kl"]
+[ext_resource type="Texture2D" uid="uid://bptfe4pru61s0" path="res://Assets/blue_button05.png" id="3_gx6md"]
+[ext_resource type="FontFile" uid="uid://js4ftbdsfbmn" path="res://Assets/Kenney Future Narrow.ttf" id="4_orksr"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_onh4g"]
+font = ExtResource("4_orksr")
+font_size = 40
+outline_size = 2
+outline_color = Color(0, 0, 0, 0.8)
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_v0wfo"]
+font = ExtResource("4_orksr")
+font_size = 30
+outline_size = 2
+outline_color = Color(0, 0, 0, 0.8)
+shadow_color = Color(0, 0, 0, 1)
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BG" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_d4qyd")
+expand_mode = 5
+
+[node name="MC" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBC" type="VBoxContainer" parent="MC"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_constants/separation = 35
+alignment = 1
+
+[node name="GameTitle" type="TextureButton" parent="MC/VBC"]
+custom_minimum_size = Vector2(300, 75)
+layout_mode = 2
+size_flags_horizontal = 4
+texture_pressed = ExtResource("3_gx6md")
+stretch_mode = 0
+
+[node name="TitleLabel" type="Label" parent="MC/VBC/GameTitle"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_orksr")
+text = "Game Title"
+label_settings = SubResource("LabelSettings_onh4g")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TitleDivider" type="Control" parent="MC/VBC"]
+layout_mode = 2
+
+[node name="LoadGame" type="TextureButton" parent="MC/VBC"]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("2_0l0kl")
+texture_pressed = ExtResource("3_gx6md")
+stretch_mode = 0
+
+[node name="LoadGameLabel" type="Label" parent="MC/VBC/LoadGame"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Load Game"
+label_settings = SubResource("LabelSettings_v0wfo")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LoadGameDivider" type="Control" parent="MC/VBC"]
+layout_mode = 2
+
+[node name="NewGame" type="TextureButton" parent="MC/VBC"]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("2_0l0kl")
+texture_pressed = ExtResource("3_gx6md")
+stretch_mode = 0
+
+[node name="NewGameLabel" type="Label" parent="MC/VBC/NewGame"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "New Game"
+label_settings = SubResource("LabelSettings_v0wfo")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Options" type="TextureButton" parent="MC/VBC"]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("2_0l0kl")
+texture_pressed = ExtResource("3_gx6md")
+stretch_mode = 0
+
+[node name="OptionsLabel" type="Label" parent="MC/VBC/Options"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Options"
+label_settings = SubResource("LabelSettings_v0wfo")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Credits" type="TextureButton" parent="MC/VBC"]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("2_0l0kl")
+texture_pressed = ExtResource("3_gx6md")
+stretch_mode = 0
+
+[node name="CreditsLabel" type="Label" parent="MC/VBC/Credits"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Credits"
+label_settings = SubResource("LabelSettings_v0wfo")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ExitDivider" type="Control" parent="MC/VBC"]
+layout_mode = 2
+
+[node name="Exit" type="TextureButton" parent="MC/VBC"]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("2_0l0kl")
+texture_pressed = ExtResource("3_gx6md")
+stretch_mode = 0
+
+[node name="ExitLabel" type="Label" parent="MC/VBC/Exit"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Exit"
+label_settings = SubResource("LabelSettings_v0wfo")
+horizontal_alignment = 1
+vertical_alignment = 1
