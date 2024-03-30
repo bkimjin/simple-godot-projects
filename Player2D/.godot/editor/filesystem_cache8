@@ -1,6 +1,0 @@
-ea4bc82a6ad023ab7ee23ee620429895
-::res://::1711422178
-icon.svg::CompressedTexture2D::5653212673168539436::1707114133::1707114137::1::::<><>::
-player2d.gd::GDScript::-1::1707200441::0::1::::<>CharacterBody2D<>::
-player2d.tscn::PackedScene::416173524891004831::1707201413::0::1::::<><>::res://player2d.gd<>uid://cmspt7k5oeevs::::res://icon.svg
-README.md::TextFile::-1::1707201219::0::1::::<><>::
