@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://cakxtjr12k2as"]
+
+[ext_resource type="Script" uid="uid://cp0u04fqykdfq" path="res://Scripts/Systems/world.gd" id="1_83u66"]
+[ext_resource type="Script" uid="uid://43axed7kjc0a" path="res://Scripts/Tiles/hex_spawner.gd" id="2_eid5w"]
+[ext_resource type="PackedScene" uid="uid://7klo5xq62dwq" path="res://Scenes3d/HexTile.tscn" id="3_w5lq7"]
+[ext_resource type="PackedScene" uid="uid://c8nlltbsk6ltc" path="res://Scenes3d/HexPlaceholder.tscn" id="4_p84yo"]
+
+[node name="World" type="Node3D"]
+script = ExtResource("1_83u66")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 5, 10)
+current = true
+
+[node name="HexSpawner" type="Node" parent="."]
+script = ExtResource("2_eid5w")
+hex_tile = ExtResource("3_w5lq7")
+placeholder_tile = ExtResource("4_p84yo")
